@@ -30,10 +30,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--background-color);
 }
 
 .navbar {
-  background-color: var(--base-dark);
+  background-color: var(--primary-color);
   padding: 0;
   display: flex;
   align-items: center;
