@@ -3,16 +3,16 @@
 :root {
   /* ThirukkuralLearnHub color palette */
   --primary-color: #2D3A4A;
-  --secondary-color: #F5F5F5;
+  --secondary-color: #FAF3E3; /* Changed from #F5F5F5 (pale gray) to soft beige */
   --accent-color: #C19A6B;
 
   /* Text and UI colors based on new palette */
-  --background-color: var(--primary-color);
-  --surface-color: var(--secondary-color);
-  --text-color: #2D3A4A;       /* Dark text on light surfaces */
-  --text-on-primary: #ffffff;  /* White text on primary bg */
-  --text-secondary: #5d6c85;   /* Muted/darker secondary text */
-  --border-color: #bfc6d3;
+  --background-color: #FAF3E3;  /* Soft warm beige as the background */
+  --surface-color: #fffefa;     /* Slightly lighter for surface/cards - still ensures separation */
+  --text-color: #2D3A4A;        /* Dark text on light surfaces */
+  --text-on-primary: #ffffff;   /* White text on primary bg */
+  --text-secondary: #5d6c85;    /* Muted/darker secondary text */
+  --border-color: #cbbaa7;      /* Muted brown for better blend with new background */
 
   /* Old variables for possible legacy refs */
   --base-light: var(--accent-color);
