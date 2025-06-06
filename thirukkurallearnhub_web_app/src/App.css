@@ -43,7 +43,9 @@ body {
 }
 
 .navbar {
-  background-color: var(--primary-color);
+  background-color: #23272E; /* Deep neutral dark for strong navbar contrast */
+  /* fallback and theming harmony: can use var(--primary-color) #2D3A4A if desired */
+  /* background-color: var(--primary-color); */
   padding: 0;
   display: flex;
   align-items: center;
@@ -73,7 +75,8 @@ body {
   align-items: center;
   gap: 8px;
   user-select: none;
-  color: var(--text-on-primary);
+  color: #fff; /* White on dark navbar for high readability */
+  letter-spacing: 1px;
 }
 
 .logo-symbol {
