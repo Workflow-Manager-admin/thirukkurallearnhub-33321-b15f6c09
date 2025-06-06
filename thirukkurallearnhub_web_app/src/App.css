@@ -1,16 +1,27 @@
 :root {
-  --base-light: #00ffff;
-  --base-dark: #00008b;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  /* ThirukkuralLearnHub color palette */
+  --primary-color: #2D3A4A;
+  --secondary-color: #F5F5F5;
+  --accent-color: #C19A6B;
+
+  /* Text and UI colors based on new palette */
+  --background-color: var(--primary-color);
+  --surface-color: var(--secondary-color);
+  --text-color: #2D3A4A;       /* Dark text on light surfaces */
+  --text-on-primary: #ffffff;  /* White text on primary bg */
+  --text-secondary: #5d6c85;   /* Muted/darker secondary text */
+  --border-color: #bfc6d3;
+
+  /* Old variables for possible legacy refs */
+  --base-light: var(--accent-color);
+  --base-dark: var(--primary-color);
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--base-dark);
-  color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-on-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
