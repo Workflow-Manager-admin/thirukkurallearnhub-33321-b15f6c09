@@ -35,6 +35,15 @@ body {
   z-index: 100;
   min-height: 56px;
 }
+/* Responsive/collapsible navbar custom styles */
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  min-height: 56px;
+}
 
 .logo {
   font-size: 1.25rem;
@@ -42,10 +51,118 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  user-select: none;
 }
 
 .logo-symbol {
   color: var(--base-light);
+}
+
+/* Hamburger toggle (hidden desktop, visible mobile) */
+.navbar-toggle {
+  background: none;
+  border: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 32px;
+  width: 42px;
+  cursor: pointer;
+  z-index: 101;
+  margin-left: 8px;
+}
+
+.navbar-toggle-bar {
+  width: 28px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: var(--base-light);
+  border-radius: 2px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Nav links: for desktop */
+.navbar-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.navbar-link,
+.navbar-links .btn {
+  padding: 7px 16px;
+  background: none;
+  border-radius: 4px;
+  border: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.navbar-link.active,
+.navbar-link:hover,
+.navbar-links .btn:hover {
+  background-color: var(--base-light);
+  color: #111;
+}
+
+/* MOBILE: collapsed menu */
+@media (max-width: 750px) {
+  .navbar-toggle {
+    display: flex;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    background: var(--base-dark);
+    border-radius: 0 0 0 10px;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(20,40,80,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 120px;
+    width: 46vw;
+    max-width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px) scale(0.97);
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 100;
+    padding: 6px 0;
+  }
+  .navbar-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  .navbar-link,
+  .navbar-links .btn {
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 13px 18px;
+    margin: 0;
+    border-radius: 0;
+    font-size: 1.08rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .navbar-link:last-child,
+  .navbar-links .btn:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Prevent main content from appearing behind navbar */
+main {
+  padding-top: 96px;
 }
 
 .container {
