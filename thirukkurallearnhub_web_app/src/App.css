@@ -200,7 +200,7 @@ main {
 
 /* ---- CARD-STYLE SECTION ---- */
 .kural-card {
-  background: var(--surface-color);
+  background: var(--surface-color); /* #fffefa; soft, near-beige surface */
   border-radius: 14px;
   box-shadow: 0 2px 14px rgba(45, 58, 74, 0.09);
   border: 1.5px solid var(--border-color);
