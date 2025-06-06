@@ -81,32 +81,18 @@ body {
   color: var(--accent-color);
 }
 
-/* Hamburger toggle (hidden desktop, visible mobile) */
+/* Hamburger toggle (never shown, always hidden) */
 .navbar-toggle {
-  background: none;
-  border: none;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  height: 32px;
-  width: 42px;
-  cursor: pointer;
-  z-index: 101;
-  margin-left: 8px;
+  display: none !important;
 }
 
 .navbar-toggle-bar {
-  width: 28px;
-  height: 3px;
-  margin: 3px 0;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  display: block;
-  transition: 0.3s;
+  display: none !important;
 }
 
-/* Nav links: for desktop */
-.navbar-links {
+/* Nav links always shown and row direction on desktop */
+.navbar-links,
+.navbar-links-always {
   display: flex;
   gap: 12px;
   align-items: center;
