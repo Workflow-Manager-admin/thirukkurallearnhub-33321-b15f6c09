@@ -23,23 +23,22 @@ body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   /* Add background image for watermark effect */
-  background-color: var(--background-color);
+  background-color: var(--background-color); /* #FAF3E3 */
   background-image: url('./assets/thiruvalluvar-bg.png');
   background-size: contain;
   background-position: bottom right;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--text-on-primary);
+  color: var(--text-color); /* Now use --text-color for default text (was --text-on-primary) */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Subtle overlay to further soften image if needed (for edge cases, fallback for missing transparency) */
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--background-color);
+  background: var(--background-color); /* #FAF3E3 */
   /* Fallback for body background if needed */
 }
 
