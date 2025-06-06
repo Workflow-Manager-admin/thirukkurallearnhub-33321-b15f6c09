@@ -80,7 +80,9 @@ body {
 }
 
 .logo-symbol {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Gold accent works on dark navbar */
+  font-size: 1.22em;
+  margin-right: 2px;
 }
 
 /* Hamburger toggle (never shown, always hidden) */
