@@ -1,39 +1,30 @@
 import React from "react";
 import Card from "../components/Card";
+import { demoQuizQuestions } from "../data";
 
 /**
  * Quiz Page component: Contains a card-style interactive quiz (stub content for mobile-friendly preview).
  * PUBLIC_INTERFACE
  */
-const demoQuiz = {
-  question: "What does this Kural mean?",
-  tamil: "அகர முதல எழுத்தெல்லாம் ஆதி\nபகவன் முதலே உலகு.",
-  options: [
-    "Letter A is the last letter",
-    "God is the beginning of everything",
-    "World is self-created",
-    "Alphabet starts with 'Ka'"
-  ],
-  correct: 1
-};
-
 function Quiz() {
-  // Placeholder: not interactive yet, demo card layout only
+  // Use the first demo question for preview
+  const demoQuiz = demoQuizQuestions[0];
+
   return (
     <div>
-      <div className="hero" style={{paddingBottom: 30}}>
+      <div className="hero" style={{ paddingBottom: 30 }}>
         <div className="subtitle">Test Your Knowledge!</div>
-        <h1 className="title" style={{marginBottom: 14}}>Quiz</h1>
+        <h1 className="title" style={{ marginBottom: 14 }}>Quiz</h1>
         <div className="description">
           Try the Thirukkural quiz. (Demo UI)
         </div>
       </div>
-      <div className="quiz-card-list" style={{marginTop: 8}}>
+      <div className="quiz-card-list" style={{ marginTop: 8 }}>
         <Card className="quiz-card">
-          <div className="kural-card-tamil" style={{marginBottom: 8}}>
+          <div className="kural-card-tamil" style={{ marginBottom: 8 }}>
             {demoQuiz.tamil}
           </div>
-          <div className="kural-card-explanation" style={{fontWeight: 600}}>
+          <div className="kural-card-explanation" style={{ fontWeight: 600 }}>
             {demoQuiz.question}
           </div>
           <div>
@@ -43,13 +34,15 @@ function Quiz() {
                 className="quiz-option-btn"
                 tabIndex={0}
                 disabled
-                style={{marginRight: 10}}
+                style={{ marginRight: 10 }}
               >
                 {opt}
               </button>
             ))}
           </div>
-          <div className="quiz-feedback-correct" style={{marginTop: 10}}>Correct answer: {demoQuiz.options[demoQuiz.correct]}</div>
+          <div className="quiz-feedback-correct" style={{ marginTop: 10 }}>
+            Correct answer: {demoQuiz.options[demoQuiz.correct]}
+          </div>
         </Card>
       </div>
     </div>
