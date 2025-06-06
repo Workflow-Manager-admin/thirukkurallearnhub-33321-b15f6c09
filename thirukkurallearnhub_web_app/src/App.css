@@ -64,10 +64,11 @@ body {
   align-items: center;
   gap: 8px;
   user-select: none;
+  color: var(--text-on-primary);
 }
 
 .logo-symbol {
-  color: var(--base-light);
+  color: var(--accent-color);
 }
 
 /* Hamburger toggle (hidden desktop, visible mobile) */
@@ -88,7 +89,7 @@ body {
   width: 28px;
   height: 3px;
   margin: 3px 0;
-  background-color: var(--base-light);
+  background-color: var(--accent-color);
   border-radius: 2px;
   display: block;
   transition: 0.3s;
@@ -107,19 +108,19 @@ body {
   background: none;
   border-radius: 4px;
   border: none;
-  color: var(--text-color);
+  color: var(--surface-color);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 
 .navbar-link.active,
 .navbar-link:hover,
 .navbar-links .btn:hover {
-  background-color: var(--base-light);
-  color: #111;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 /* MOBILE: collapsed menu */
