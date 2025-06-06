@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavigationBar from './NavigationBar';
 
 /**
  * Placeholder Home component
@@ -60,22 +61,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <nav className="navbar">
-          <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-              <div className="logo">
-                <span className="logo-symbol">*</span> KAVIA AI
-              </div>
-              <div style={{ display: 'flex', gap: '16px' }}>
-                <Link className="btn" to="/">Home</Link>
-                <Link className="btn" to="/about">About</Link>
-                <Link className="btn" to="/quiz">Quiz</Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        <main style={{ paddingTop: '96px' }}>
+        <NavigationBar />
+        <main>
           <div className="container">
             <Routes>
               <Route path="/" element={<HomePage />} />
