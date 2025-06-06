@@ -182,7 +182,7 @@ main {
   padding: 0 24px;
   width: 100%;
   box-sizing: border-box;
-  background: var(--surface-color);
+  background: var(--surface-color); /* #fffefa (slightly lighter than --background-color for visual pop) */
   border-radius: 16px;
   box-shadow: 0 1px 10px rgba(45, 58, 80, 0.06);
 }
@@ -223,7 +223,8 @@ main {
 /* Home page athigaaram card selected */
 .card-selected {
   border: 2px solid var(--accent-color) !important;
-  background: linear-gradient(96deg, #fff7eb 80%, #f7eedd 100%);
+  background: linear-gradient(96deg, #FAF3E3 80%, #f7eedd 100%);
+  /* New gradient uses the new background shade for harmony */
   box-shadow: 0 2px 26px rgba(193,154,107,0.11), 0 0 1px rgba(50,50,50,0.03);
   z-index: 1;
   transition: border 0.18s, box-shadow 0.18s;
