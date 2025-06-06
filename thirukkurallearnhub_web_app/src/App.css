@@ -201,6 +201,125 @@ main {
   background: transparent;
 }
 
+/* ---- CARD-STYLE SECTION ---- */
+.kural-card {
+  background: var(--surface-color);
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(45, 58, 74, 0.09);
+  border: 1.5px solid var(--border-color);
+  margin: 18px 0;
+  padding: 1.15rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  transition: box-shadow 0.2s;
+}
+
+.kural-card:hover, .kural-card:focus-within {
+  box-shadow: 0 4px 20px rgba(45, 58, 74, 0.16);
+}
+
+.kural-card-title {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.kural-card-tamil {
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+  font-size: 1.15rem;
+  color: #513b14;
+}
+
+.kural-card-translation, .kural-card-explanation {
+  color: var(--text-secondary);
+  font-size: 1.06rem;
+  margin-bottom: 4px;
+}
+
+.card-btn-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+/* QUIZ CARD (for question) can reuse .kural-card + quiz specific tweaks */
+.quiz-card {
+  background: var(--surface-color);
+  border-radius: 13px;
+  box-shadow: 0 1px 11px rgba(45, 58, 74, 0.07);
+  border: 1.4px solid var(--border-color);
+  padding: 1.18rem 1.2rem;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: flex-start;
+}
+
+.quiz-option-btn {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.58em 1.2em;
+  margin: 0.25em 0;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+
+.quiz-option-btn.selected,
+.quiz-option-btn:focus {
+  background: #b88750;
+  color: #fff;
+}
+
+.quiz-feedback-correct {
+  color: #079634;
+  font-weight: bold;
+}
+.quiz-feedback-incorrect {
+  color: #AD3030;
+  font-weight: bold;
+}
+
+/* Responsive cards centering for mobile-first */
+@media (max-width: 750px) {
+  .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .kural-card, .quiz-card {
+    max-width: 98vw;
+    min-width: unset;
+  }
+}
+
+/* Center main content flex for card lists */
+.kural-card-list,
+.quiz-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 750px) {
+  .kural-card-list, .quiz-card-list {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    gap: 28px;
+  }
+}
+
 .subtitle {
   color: var(--accent-color);
   font-weight: 500;
