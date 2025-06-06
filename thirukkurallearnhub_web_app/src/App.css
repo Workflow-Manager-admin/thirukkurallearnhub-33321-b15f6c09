@@ -132,11 +132,11 @@ body {
     position: absolute;
     top: 54px;
     right: 0;
-    background: var(--base-dark);
+    background: var(--primary-color);
     border-radius: 0 0 0 10px;
     border-left: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(20,40,80,0.10);
+    box-shadow: 0 2px 8px rgba(45, 58, 74, 0.10);
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -166,6 +166,7 @@ body {
     border-radius: 0;
     font-size: 1.08rem;
     border-bottom: 1px solid var(--border-color);
+    color: var(--surface-color);
   }
   .navbar-link:last-child,
   .navbar-links .btn:last-child {
