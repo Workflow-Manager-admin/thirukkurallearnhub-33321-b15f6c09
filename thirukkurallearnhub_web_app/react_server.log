@@ -21,3 +21,11 @@ webpack compiled successfully
 Compiling...
 Compiled successfully!
 webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearnhub-33321-b15f6c09/thirukkurallearnhub_web_app/src'
+ERROR in ./src/App.js 6:0-70
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/thirukkurallearnhub-33321-b15f6c09/thirukkurallearnhub_web_app/src'
+
+webpack compiled with 1 error
